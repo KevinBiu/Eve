@@ -1,0 +1,156 @@
+import random 
+import sys
+import time 
+
+
+class player():
+  def __init__(self,playername):
+    super().__init__()
+    self.name = playername
+    self.life = 200
+    self.maxlife = 200
+    self.atk = random.randint(1,10)
+  
+  def attack(self,monster):
+    monster.life = monster.life -  self.atk
+    time.sleep(1)
+    return 'You Dealt ' + str(self.atk) + 'DMG'
+    
+    
+  def heal(self):
+    self.life = self.life + self.heal
+    return 'You healed Yourself ' + str(self.heal) + 'Life Points'
+    
+  def defend(self,monster):
+    self.block = random.randint  (1,5)
+    if self.block < 3:
+      self.life = self.life - monster.atk
+      return 'You Took ' + str(monster.atk) + 'DMG'
+    elif self.block >= 3:
+      return 'You block The enemy attack'
+    
+      
+
+
+class Slime ():
+  def __init__ (self):
+    self.name = "Slime"
+    self.life = 10
+    self.atk = random.randint (10,15)
+    
+  def attack(self):
+    return 'The Slime Dealt ' + str(self.atk) + " To You"
+    
+  def death(self):
+    print ("The Slime Has been defeated")
+    
+    
+class bandits():
+  def __init__(self):
+    self.name = "Bandits"
+    self.life = 30 
+    self.atk = random.randint (15,20)
+    self.spell = random.randint (20,25)
+    
+    
+  def attack(self):
+    return 'Bandits Dealt ' + str(self.atk) + " To You"
+    
+  def DangerousPostion(self):
+    return 'The Bandits Threw a dangerous postion, You took ' + str(self.spell) + 'Damage'
+    
+  def death(self):
+    return ("The Bandits have been defeated")
+    
+    
+class golem():
+  def __init__(self):
+    self.name = "Golem"
+    self.life = 60
+    self.atk = random.randint(10,20)
+    self.defs = 10 
+    
+  def attack(self):
+    return 'The Golem Dealt ' + str(self.atk) + " To You"
+    
+  def death(self):
+    return ("The Mighty Golem has been defeated " )
+    
+    
+class goblins():
+  def __init__(self):
+    self.name = "Goblins"
+    self.life = 35
+    self.atk = random.randint(15,30)
+    
+  def attack(self):
+    return 'The Goblins Dealt ' + str(self.atk) + " To You"
+    
+  def death(self):
+    return ("The Goblins Have been defeated")
+    
+    
+class demon():
+  def __init__(self):
+    self.name = "Demon"
+    self.life = 40
+    self.atk = random.randint(25,30)
+    self.spell = random.randint(30,50)
+    
+  def attack(self):
+    return 'The Demon has Dealt ' + str(self.atk) + " To You"
+    
+  def death(self):
+    return ("The Demon Has been defeated")  
+    
+  def DangerousSpell(self):
+    return 'The Demon Has Cast a Spell. It Dealt ' + str(self.spell) + 'To you'
+    
+class StreetThugs():
+  def __init__(self):
+    self.name1 = "Thug 1"
+    self.name2 = "Thug 2"
+    self.life1 = 70
+    self.life2 = 70
+    self.atk = random.randint(10,20)
+    self.atk2 = random.randint(15,20)
+    
+  def attack(self):
+    return 'Thug 1 has Dealt ' + str(self.atk) + " To You"
+    
+  def death(self):
+    return ("Thug 1 Has been defeated")  
+    
+  def attack2(self):
+    return 'Thug 2 has Dealt ' + str(self.atk) + " To You"
+    
+  def death2(self):
+    return ("Thug 2 Has been defeated")  
+    
+class dragon():
+  def __init__(self):
+    self.name = "Dragon"
+    self.life = 100
+    self.atk = random.randint(40,60)
+    self.fireball = random.randint(1,100)
+    
+  def attack(self):
+    return 'The Dragon has Dealt ' + str(self.atk) + " To You"
+    
+  def death(self):
+    return ("The Dragon Has been defeated")  
+    
+class bahamut():
+  def __init__(self):
+    self.name = "Bahamut"
+    self.life = 200
+    self.atk = random.randint(50,100)
+    self.spl = random.randint(100,150)
+    
+  def attack(self):
+    return 'The Bahamut has Dealt ' + str(self.atk) + " To You"
+    
+  def death(self):
+    return ("The Bahamut Has been defeated")  
+  
+  
